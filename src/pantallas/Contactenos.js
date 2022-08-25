@@ -1,11 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useState, useEffect } from 'react';
-import { StyleSheet, View, Text, TextInput, TouchableOpacity, ScrollView, Image, Linking } from 'react-native';
+import { StyleSheet, View, Text, TextInput, TouchableOpacity, ScrollView, Image, Linking, Alert } from 'react-native';
 import { Picker } from '@react-native-picker/picker';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import SendEmail from '../correos/SendEmail'
 
 export function Contactenos() {
-
 
 
   const Paises = [
@@ -117,13 +117,74 @@ export function Contactenos() {
   const [correo, onChangeCorreo] = useState("");
   const [pais, setPais] = useState("");
   const [telefono, onChangeTelefono] = useState("");
+  const [codigoPais, setCodigoPais] = useState("");
 
-  function handleEmail() {
+  function handleEmail(nom,corr,pai,tele,cod) {
+
+    const nombreEnviar = nom;
+    const correoEnviar = corr;
+    const paisEnviar = pai;
+    const telefonoEnviar = tele;
+    const codigo = cod;
+
+    console.log(cod)
+
+    if(nombreEnviar.length === 0){
+      return (
+        Alert.alert(
+          "Falta de un campo",
+          "Te falta agregar el campo de Nombre y Apellido",
+          [
+            { text: "OK", onPress: () => console.log("Cerrado") }
+          ]
+        )
+      )
+    }
+    
+    if(correoEnviar.length === 0){
+      return (
+        Alert.alert(
+          "Falta de un campo",
+          "Te falta agregar el campo de Correo eléctronico",
+          [
+            { text: "OK", onPress: () => console.log("Cerrado") }
+          ]
+        )
+      )
+    }
+
+    if(paisEnviar.length === 0){
+      return (
+        Alert.alert(
+          "Falta de un campo",
+          "Te falta agregar el campo de País",
+          [
+            { text: "OK", onPress: () => console.log("Cerrado") }
+          ]
+        )
+      )
+    }
+
+    if(telefonoEnviar.length === 0){
+      return (
+        Alert.alert(
+          "Falta de un campo",
+          "Te falta agregar el campo de Teléfono",
+          [
+            { text: "OK", onPress: () => console.log("Cerrado") }
+          ]
+        )
+      )
+    }
+    const prueba = "https://api.whatsapp.com/send?phone=+5804127273005&text=Hola%20" + nom
+    const urlWhatsapp = `https://api.whatsapp.com/send?phone=+5804127273005&text=Hola%20Metodo%20Libio%20soy%20Rodolfo,%0D%0Aeste%20es%20mi%20numero%20personal%20,%0D%0Asoy%20de%20Venezuela%20y%20estoy%20interesado%20en%20el%20MetodoLibio!!!`
+    Linking.openURL(prueba)
 
   }
 
 
   return (
+    
     <SafeAreaView style={styles.container}>
       <TouchableOpacity
         onPress={() => Linking.openURL(url)}
@@ -165,7 +226,7 @@ export function Contactenos() {
             placeholder="admin@ejemplo.com"
             placeholderTextColor="#fff"
           />
-          <Text style={styles.Label}>Pais</Text>
+          <Text style={styles.Label}>País</Text>
           <View style={{ borderWidth: 1, width: '100%', borderRadius: 10, height: 60, marginBottom: 15, borderColor: '#ffb800', paddingHorizontal: 12 }}>
             <Picker
               selectedValue={pais}
@@ -191,6 +252,9 @@ export function Contactenos() {
                       Paises.map(e => {
                         if (pais === e.id) {
                           const codigo = e.numero
+                          if(codigo.length >= 0){
+                            return setCodigoPais(codigo)
+                          }
                           return (
                             e.numero
                           )
@@ -218,7 +282,7 @@ export function Contactenos() {
         </View>
         <View style={{ width: '100%', alignItems: 'center' }}>
           <TouchableOpacity
-            onPress={() => handleEmail()}
+            onPress={() => handleEmail(nombre,correo,pais,telefono,codigo)}
             style={styles.boton}
           >
             <Text style={styles.textoBoton}>
