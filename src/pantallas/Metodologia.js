@@ -63,14 +63,14 @@ const styles = StyleSheet.create({
   },
   Titulo: {
     color: '#ffb800',
-    fontSize: 25,
+    fontSize: 23,
     textAlign: 'center',
     fontWeight: 'bold',
     marginBottom:20,
   },
   Lista: {
     color: '#fff',
-    fontSize: 21,
+    fontSize: 19,
     marginVertical: 10,
     textAlign: 'center'
   },

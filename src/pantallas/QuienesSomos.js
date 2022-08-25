@@ -39,7 +39,7 @@ export function QuienesSomos() {
         />
 
         <Text style={styles.QueEs}>
-          ¿Qué es Metodo Libio?
+          ¿Qué es Método Libio?
         </Text>
         <Text style={styles.QueEsTexto}>
           <Text style={styles.Bold}>
@@ -93,14 +93,14 @@ const styles = StyleSheet.create({
   QueEs: {
     color: '#ffb800',
     textAlign: 'center',
-    fontSize: 30,
+    fontSize: 28,
     fontWeight: 'bold',
     marginVertical: 15,
     marginTop:25
   },
   QueEsTexto: {
     color: '#fff',
-    fontSize: 21,
+    fontSize: 19,
     paddingHorizontal: '5%',
     textAlign: 'justify'
   },

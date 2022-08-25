@@ -227,7 +227,7 @@ export function Contactenos() {
             onChangeText={onChangeNombre}
             value={nombre}
             placeholder="Admin"
-            placeholderTextColor="#fff"
+            placeholderTextColor="#ffffff7d"
           />
           <Text style={styles.Label}>Correo</Text>
           <TextInput
@@ -236,13 +236,17 @@ export function Contactenos() {
             onChangeText={onChangeCorreo}
             value={correo}
             placeholder="admin@ejemplo.com"
-            placeholderTextColor="#fff"
+            placeholderTextColor="#ffffff7d"
           />
           <Text style={styles.Label}>País</Text>
           <View style={{ borderWidth: 1, width: '100%', borderRadius: 10, height: 60, marginBottom: 15, borderColor: '#ffb800', paddingHorizontal: 12 }}>
             <Picker
               selectedValue={pais}
-              style={{ color: "#fff" }}
+              style={
+                pais.length === 0
+                ? {color: "#ffffff7d"}
+                : {color: '#fff'}
+                }
               onValueChange={(itemValue, itemIndex) =>
                 setPais(itemValue)
               }>
@@ -283,8 +287,8 @@ export function Contactenos() {
                 keyboardType="numeric"
                 onChangeText={onChangeTelefono}
                 value={telefono}
-                placeholder=""
-                placeholderTextColor="#fff"
+                placeholder="99999"
+                placeholderTextColor="#ffffff7d"
               />
             </View>
           </View>
@@ -332,7 +336,7 @@ const styles = StyleSheet.create({
   Label: {
     color: '#fff',
     marginBottom: 5,
-    fontSize: 20
+    fontSize: 17
   },
   boton: {
     width: 250,

@@ -19,86 +19,78 @@ export function Testimonios() {
         />
       </TouchableOpacity>
       <ScrollView>
-        <View style={{ width: '90%', height: 250, marginHorizontal: '5%', marginVertical: 10 }}>
-          <WebView
-            style={{ width: '100%', margin: 0, padding: 0, backgroundColor: '#141f23' }}
-            originWhitelist={['*']}
-            javaScriptEnabled={true}
-            source={{
-              html: `<iframe width="100%" height="100%" src="https://www.youtube.com/embed/TuBFbVN9tDA" title="textimonio españa 01" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
-            }}
+        <TouchableOpacity
+          onPress={() => Linking.openURL('https://youtu.be/TuBFbVN9tDA')}
+          style={{ width: '90%', marginHorizontal: '5%', marginVertical: 10 }}
+        >
+          <Image
+            source={require('../img/testimoniouno.png')}
+            style={{ width: '100%' }}
           />
-        </View>
-        <View style={{ width: '90%', height: 250, marginHorizontal: '5%', marginVertical: 10 }}>
-          <WebView
-            style={{ width: '100%', margin: 0, padding: 0, backgroundColor: '#141f23' }}
-            originWhitelist={['*']}
-            javaScriptEnabled={true}
-            source={{
-              html: `<iframe width="100%" height="100%" src="https://www.youtube.com/embed/T2MkXJVzUi8" title="textimonio argentina 02" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
-            }}
+        </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => Linking.openURL('https://youtu.be/T2MkXJVzUi8')}
+          style={{ width: '90%', marginHorizontal: '5%', marginVertical: 10 }}
+        >
+          <Image
+            source={require('../img/testimoniodos.png')}
+            style={{ width: '100%' }}
           />
-        </View>
-        <View style={{ width: '90%', height: 250, marginHorizontal: '5%', marginVertical: 10 }}>
-          <WebView
-            style={{ width: '100%', margin: 0, padding: 0, backgroundColor: '#141f23' }}
-            originWhitelist={['*']}
-            javaScriptEnabled={true}
-            source={{
-              html: `<iframe width="100%" height="100%" src="https://www.youtube.com/embed/xOye_wWMybQ" title="textimonio argentina 03" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
-            }}
+        </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => Linking.openURL('https://youtu.be/Xg5s-wgW-oM')}
+          style={{ width: '90%', marginHorizontal: '5%', marginVertical: 10 }}
+        >
+          <Image
+            source={require('../img/testimoniocuatro.png')}
+            style={{ width: '100%' }}
           />
-        </View>
-        <View style={{ width: '90%', height: 250, marginHorizontal: '5%', marginVertical: 10 }}>
-          <WebView
-            style={{ width: '100%', margin: 0, padding: 0, backgroundColor: '#141f23' }}
-            originWhitelist={['*']}
-            javaScriptEnabled={true}
-            source={{
-              html: `<iframe width="100%" height="100%" src="https://www.youtube.com/embed/SZFALSGn8MA" title="textimonio españa 02" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
-            }}
+        </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => Linking.openURL('https://youtu.be/xOye_wWMybQ')}
+          style={{ width: '90%', marginHorizontal: '5%', marginVertical: 10 }}
+        >
+          <Image
+            source={require('../img/testimoniotres.png')}
+            style={{ width: '100%' }}
           />
-        </View>
-        <View style={{ width: '90%', height: 250, marginHorizontal: '5%', marginVertical: 10 }}>
-          <WebView
-            style={{ width: '100%', margin: 0, padding: 0, backgroundColor: '#141f23' }}
-            originWhitelist={['*']}
-            javaScriptEnabled={true}
-            source={{
-              html: `<iframe width="100%" height="100%" src="https://www.youtube.com/embed/A8Yo4YIQ8GE" title="textimonio mexico" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
-            }}
+        </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => Linking.openURL('https://youtu.be/A8Yo4YIQ8GE')}
+          style={{ width: '90%', marginHorizontal: '5%', marginVertical: 10 }}
+        >
+          <Image
+            source={require('../img/testimonioscinco.png')}
+            style={{ width: '100%' }}
           />
-        </View>
-        <View style={{ width: '90%', height: 250, marginHorizontal: '5%', marginVertical: 10 }}>
-          <WebView
-            style={{ width: '100%', margin: 0, padding: 0, backgroundColor: '#141f23' }}
-            originWhitelist={['*']}
-            javaScriptEnabled={true}
-            source={{
-              html: `<iframe width="100%" height="100%" src="https://www.youtube.com/embed/-6dsbhic6V4" title="textimonio peru 01" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
-            }}
+        </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => Linking.openURL('https://youtu.be/SZFALSGn8MA')}
+          style={{ width: '90%', marginHorizontal: '5%', marginVertical: 10 }}
+        >
+          <Image
+            source={require('../img/testimoniosseis.png')}
+            style={{ width: '100%' }}
           />
-        </View>
-        <View style={{ width: '90%', height: 250, marginHorizontal: '5%', marginVertical: 10 }}>
-          <WebView
-            style={{ width: '100%', margin: 0, padding: 0, backgroundColor: '#141f23' }}
-            originWhitelist={['*']}
-            javaScriptEnabled={true}
-            source={{
-              html: `<iframe width="100%" height="100%" src="https://www.youtube.com/embed/Xg5s-wgW-oM" title="textimonio ecuador 03" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
-            }}
+        </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => Linking.openURL('https://youtu.be/SViZhZhpy-4')}
+          style={{ width: '90%', marginHorizontal: '5%', marginVertical: 10 }}
+        >
+          <Image
+            source={require('../img/testimoniossiete.png')}
+            style={{ width: '100%' }}
           />
-        </View>
-        <View style={{ width: '90%', height: 250, marginHorizontal: '5%', marginVertical: 10 }}>
-          <WebView
-            style={{ width: '100%', margin: 0, padding: 0, backgroundColor: '#141f23' }}
-            originWhitelist={['*']}
-            javaScriptEnabled={true}
-            source={{
-              html: `<iframe width="100%" height="100%" src="https://www.youtube.com/embed/1b338JaFxKM" title="textimonio ecuador 01" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
-            }}
+        </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => Linking.openURL('https://youtu.be/JUEfyz1v_jg')}
+          style={{ width: '90%', marginHorizontal: '5%', marginVertical: 10 }}
+        >
+          <Image
+            source={require('../img/testimoniosocho.png')}
+            style={{ width: '100%' }}
           />
-        </View>
+        </TouchableOpacity>
       </ScrollView>
     </SafeAreaView>
   );

@@ -34,7 +34,7 @@ export function Inicio({ navigation }) {
         style={styles.boton}
       >
         <Text style={styles.textoBoton}>
-          Metodologia
+          Metodología
         </Text>
       </TouchableOpacity>
 
