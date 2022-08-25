@@ -117,7 +117,8 @@ export function Contactenos() {
   const [correo, onChangeCorreo] = useState("");
   const [pais, setPais] = useState("");
   const [telefono, onChangeTelefono] = useState("");
-  const [codigoPais, setCodigoPais] = useState("");
+  let codi = 0;
+
 
   function handleEmail(nom,corr,pai,tele,cod) {
 
@@ -125,7 +126,7 @@ export function Contactenos() {
     const correoEnviar = corr;
     const paisEnviar = pai;
     const telefonoEnviar = tele;
-    const codigo = cod;
+    const codigoEnviar = cod;
 
     console.log(cod)
 
@@ -176,8 +177,19 @@ export function Contactenos() {
         )
       )
     }
-    const prueba = "https://api.whatsapp.com/send?phone=+5804127273005&text=Hola%20" + nom
-    const urlWhatsapp = `https://api.whatsapp.com/send?phone=+5804127273005&text=Hola%20Metodo%20Libio%20soy%20Rodolfo,%0D%0Aeste%20es%20mi%20numero%20personal%20,%0D%0Asoy%20de%20Venezuela%20y%20estoy%20interesado%20en%20el%20MetodoLibio!!!`
+    if(codigoEnviar.length === 0){
+      return (
+        Alert.alert(
+          "Falta de un campo",
+          "Te falta agregar el campo de codigo",
+          [
+            { text: "OK", onPress: () => console.log("Cerrado") }
+          ]
+        )
+      )
+    }
+
+    const prueba = "https://api.whatsapp.com/send?phone=+5804127273005&text=Hola%20Metodo%20Libio%20soy%20" + nombreEnviar + ",%0D%0Aeste%20es%20mi%20numero%20personal%20" + codigoEnviar + telefonoEnviar + ",%0D%0Asoy%20de%20" + paisEnviar + "%20y%20estoy%20interesado%20en%20el%20MetodoLibio!!!"
     Linking.openURL(prueba)
 
   }
@@ -251,10 +263,7 @@ export function Contactenos() {
                     {
                       Paises.map(e => {
                         if (pais === e.id) {
-                          const codigo = e.numero
-                          if(codigo.length >= 0){
-                            return setCodigoPais(codigo)
-                          }
+                          codi = e.numero
                           return (
                             e.numero
                           )
@@ -282,7 +291,7 @@ export function Contactenos() {
         </View>
         <View style={{ width: '100%', alignItems: 'center' }}>
           <TouchableOpacity
-            onPress={() => handleEmail(nombre,correo,pais,telefono,codigo)}
+            onPress={() => handleEmail(nombre,correo,pais,telefono,codi)}
             style={styles.boton}
           >
             <Text style={styles.textoBoton}>
