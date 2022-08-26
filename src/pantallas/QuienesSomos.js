@@ -121,13 +121,13 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: '#ffb800',
     fontWeight: 'bold',
-    fontSize: 40
+    fontSize: 38
   },
   Titulo: {
     textAlign: 'center',
     color: '#ffb800',
     fontWeight: 'bold',
-    fontSize: 27
+    fontSize: 25
   },
   Texto: {
     textAlign: 'justify',

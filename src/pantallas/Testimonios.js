@@ -1,11 +1,240 @@
 import { StatusBar } from 'expo-status-bar';
 import { useRef, useState } from 'react';
-import { StyleSheet, View, Text, Buttom, ScrollView, Image, TouchableOpacity, Linking } from 'react-native';
+import { StyleSheet, View, Text, Buttom, ScrollView, Image, TouchableOpacity, Linking, Modal } from 'react-native';
+import Icon from 'react-native-vector-icons/FontAwesome';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { WebView } from 'react-native-webview';
+import { Video, AVPlaybackStatus } from 'expo-av';
 
 export function Testimonios() {
-  const url = "https://api.whatsapp.com/send?phone=+593993371891"
+
+  const url = "https://api.whatsapp.com/send?phone=+593993371891";
+  const [img, setImg] = useState("");
+  const [modalVisible, setModalVisible] = useState(false);
+
+  const video = useRef(null);
+  const [status, setStatus] = useState({});
+
+
+  function handleModal(item) {
+
+    setImg(item);
+    setModalVisible(!modalVisible);
+
+  }
+
+
+  function handleModalView() {
+
+    if (img === "testimoniouno") {
+      return (
+        <View style={{ flex: 1, width: '100%', height: '100%', justifyContent: 'center', alignItems: 'center' }}>
+          <TouchableOpacity
+            style={{ position: 'absolute', top: '1%', right: '2%' }}
+            onPress={() => setModalVisible(!modalVisible)}
+          >
+            <Icon size={25} color='#fff' name='close' />
+          </TouchableOpacity>
+          <Video
+            ref={video}
+            style={styles.backgroundVideo}
+            source={{
+              uri: 'https://metodolibio.com/wp-content/uploads/2022/08/textimonio-espana-01-1.mp4',
+            }}
+            useNativeControls
+            resizeMode='stretch'
+            isLooping
+            onPlaybackStatusUpdate={status => setStatus(() => status)}
+            useNativeControls={false}
+            shouldPlay={true}
+          />
+        </View>
+      )
+    }
+
+    if (img === "testimoniodos") {
+      return (
+        <View style={{ flex: 1, width: '100%', height: '100%', justifyContent: 'center', alignItems: 'center' }}>
+          <TouchableOpacity
+            style={{ position: 'absolute', top: '1%', right: '2%' }}
+            onPress={() => setModalVisible(!modalVisible)}
+          >
+            <Icon size={25} color='#fff' name='close' />
+          </TouchableOpacity>
+          <Video
+            ref={video}
+            style={styles.backgroundVideo}
+            source={{
+              uri: 'https://metodolibio.com/wp-content/uploads/2022/08/textimonio-argentina-02.mp4',
+            }}
+            useNativeControls
+            resizeMode='stretch'
+            isLooping
+            onPlaybackStatusUpdate={status => setStatus(() => status)}
+            useNativeControls={false}
+            shouldPlay={true}
+          />
+        </View>
+      )
+    }
+
+    if (img === "testimoniocuatro") {
+      return (
+        <View style={{ flex: 1, width: '100%', height: '100%', justifyContent: 'center', alignItems: 'center' }}>
+          <TouchableOpacity
+            style={{ position: 'absolute', top: '1%', right: '2%' }}
+            onPress={() => setModalVisible(!modalVisible)}
+          >
+            <Icon size={25} color='#fff' name='close' />
+          </TouchableOpacity>
+          <Video
+            ref={video}
+            style={styles.backgroundVideo}
+            source={{
+              uri: 'https://metodolibio.com/wp-content/uploads/2022/08/textimonio-ecuador-03.mp4',
+            }}
+            useNativeControls
+            resizeMode='stretch'
+            isLooping
+            onPlaybackStatusUpdate={status => setStatus(() => status)}
+            useNativeControls={false}
+            shouldPlay={true}
+          />
+        </View>
+      )
+    }
+
+    if (img === "testimoniotres") {
+      return (
+        <View style={{ flex: 1, width: '100%', height: '100%', justifyContent: 'center', alignItems: 'center' }}>
+          <TouchableOpacity
+            style={{ position: 'absolute', top: '1%', right: '2%' }}
+            onPress={() => setModalVisible(!modalVisible)}
+          >
+            <Icon size={25} color='#fff' name='close' />
+          </TouchableOpacity>
+          <Video
+            ref={video}
+            style={styles.backgroundVideo}
+            source={{
+              uri: 'https://metodolibio.com/wp-content/uploads/2022/08/textimonio-argentina-03.mp4',
+            }}
+            useNativeControls
+            resizeMode='stretch'
+            isLooping
+            onPlaybackStatusUpdate={status => setStatus(() => status)}
+            useNativeControls={false}
+            shouldPlay={true}
+          />
+        </View>
+      )
+    }
+
+    if (img === "testimonioscinco") {
+      return (
+        <View style={{ flex: 1, width: '100%', height: '100%', justifyContent: 'center', alignItems: 'center' }}>
+          <TouchableOpacity
+            style={{ position: 'absolute', top: '1%', right: '2%' }}
+            onPress={() => setModalVisible(!modalVisible)}
+          >
+            <Icon size={25} color='#fff' name='close' />
+          </TouchableOpacity>
+          <Video
+            ref={video}
+            style={styles.backgroundVideo}
+            source={{
+              uri: 'https://metodolibio.com/wp-content/uploads/2022/08/textimonio-mexico.mp4',
+            }}
+            useNativeControls
+            resizeMode='stretch'
+            isLooping
+            onPlaybackStatusUpdate={status => setStatus(() => status)}
+            useNativeControls={false}
+            shouldPlay={true}
+          />
+        </View>
+      )
+    }
+
+    if (img === "testimoniosseis") {
+      return (
+        <View style={{ flex: 1, width: '100%', height: '100%', justifyContent: 'center', alignItems: 'center' }}>
+          <TouchableOpacity
+            style={{ position: 'absolute', top: '1%', right: '2%' }}
+            onPress={() => setModalVisible(!modalVisible)}
+          >
+            <Icon size={25} color='#fff' name='close' />
+          </TouchableOpacity>
+          <Video
+            ref={video}
+            style={styles.backgroundVideo}
+            source={{
+              uri: 'https://metodolibio.com/wp-content/uploads/2022/08/textimonio-espana-02.mp4',
+            }}
+            useNativeControls
+            resizeMode='stretch'
+            isLooping
+            onPlaybackStatusUpdate={status => setStatus(() => status)}
+            useNativeControls={false}
+            shouldPlay={true}
+          />
+        </View>
+      )
+    }
+
+    if (img === "testimoniossiete") {
+      return (
+        <View style={{ flex: 1, width: '100%', height: '100%', justifyContent: 'center', alignItems: 'center' }}>
+          <TouchableOpacity
+            style={{ position: 'absolute', top: '1%', right: '2%' }}
+            onPress={() => setModalVisible(!modalVisible)}
+          >
+            <Icon size={25} color='#fff' name='close' />
+          </TouchableOpacity>
+          <Video
+            ref={video}
+            style={styles.backgroundVideo}
+            source={{
+              uri: 'https://metodolibio.com/wp-content/uploads/2022/08/video-1629304122.mp4',
+            }}
+            useNativeControls
+            resizeMode='stretch'
+            isLooping
+            onPlaybackStatusUpdate={status => setStatus(() => status)}
+            useNativeControls={false}
+            shouldPlay={true}
+          />
+        </View>
+      )
+    }
+
+    if (img === "testimoniosocho") {
+      return (
+        <View style={{ flex: 1, width: '100%', height: '100%', justifyContent: 'center', alignItems: 'center' }}>
+          <TouchableOpacity
+            style={{ position: 'absolute', top: '1%', right: '2%' }}
+            onPress={() => setModalVisible(!modalVisible)}
+          >
+            <Icon size={25} color='#fff' name='close' />
+          </TouchableOpacity>
+          <Video
+            ref={video}
+            style={styles.backgroundVideo}
+            source={{
+              uri: 'https://metodolibio.com/wp-content/uploads/2022/08/textimonio-peru-04.mp4',
+            }}
+            useNativeControls
+            resizeMode='contain'
+            isLooping
+            onPlaybackStatusUpdate={status => setStatus(() => status)}
+            useNativeControls={false}
+            shouldPlay={true}
+          />
+        </View>
+      )
+    }
+
+  }
 
   return (
     <SafeAreaView style={styles.container}>
@@ -18,79 +247,99 @@ export function Testimonios() {
           style={styles.whatsapp}
         />
       </TouchableOpacity>
+      <Modal
+        animationType="slide"
+        transparent={true}
+        visible={modalVisible}
+        onRequestClose={() => {
+          setModalVisible(!modalVisible);
+        }}
+      >
+        {
+          handleModalView()
+        }
+      </Modal>
       <ScrollView>
-        <TouchableOpacity
-          onPress={() => Linking.openURL('https://youtu.be/TuBFbVN9tDA')}
-          style={{ width: '90%', marginHorizontal: '5%', marginVertical: 10 }}
-        >
-          <Image
-            source={require('../img/testimoniouno.png')}
-            style={{ width: '100%' }}
-          />
-        </TouchableOpacity>
-        <TouchableOpacity
-          onPress={() => Linking.openURL('https://youtu.be/T2MkXJVzUi8')}
-          style={{ width: '90%', marginHorizontal: '5%', marginVertical: 10 }}
-        >
-          <Image
-            source={require('../img/testimoniodos.png')}
-            style={{ width: '100%' }}
-          />
-        </TouchableOpacity>
-        <TouchableOpacity
-          onPress={() => Linking.openURL('https://youtu.be/Xg5s-wgW-oM')}
-          style={{ width: '90%', marginHorizontal: '5%', marginVertical: 10 }}
-        >
-          <Image
-            source={require('../img/testimoniocuatro.png')}
-            style={{ width: '100%' }}
-          />
-        </TouchableOpacity>
-        <TouchableOpacity
-          onPress={() => Linking.openURL('https://youtu.be/xOye_wWMybQ')}
-          style={{ width: '90%', marginHorizontal: '5%', marginVertical: 10 }}
-        >
-          <Image
-            source={require('../img/testimoniotres.png')}
-            style={{ width: '100%' }}
-          />
-        </TouchableOpacity>
-        <TouchableOpacity
-          onPress={() => Linking.openURL('https://youtu.be/A8Yo4YIQ8GE')}
-          style={{ width: '90%', marginHorizontal: '5%', marginVertical: 10 }}
-        >
-          <Image
-            source={require('../img/testimonioscinco.png')}
-            style={{ width: '100%' }}
-          />
-        </TouchableOpacity>
-        <TouchableOpacity
-          onPress={() => Linking.openURL('https://youtu.be/SZFALSGn8MA')}
-          style={{ width: '90%', marginHorizontal: '5%', marginVertical: 10 }}
-        >
-          <Image
-            source={require('../img/testimoniosseis.png')}
-            style={{ width: '100%' }}
-          />
-        </TouchableOpacity>
-        <TouchableOpacity
-          onPress={() => Linking.openURL('https://youtu.be/SViZhZhpy-4')}
-          style={{ width: '90%', marginHorizontal: '5%', marginVertical: 10 }}
-        >
-          <Image
-            source={require('../img/testimoniossiete.png')}
-            style={{ width: '100%' }}
-          />
-        </TouchableOpacity>
-        <TouchableOpacity
-          onPress={() => Linking.openURL('https://youtu.be/JUEfyz1v_jg')}
-          style={{ width: '90%', marginHorizontal: '5%', marginVertical: 10 }}
-        >
-          <Image
-            source={require('../img/testimoniosocho.png')}
-            style={{ width: '100%' }}
-          />
-        </TouchableOpacity>
+        <View style={{ width: '90%', flexDirection: 'row', justifyContent: 'space-between', marginHorizontal: '5%', marginVertical: 20 }}>
+          <TouchableOpacity
+            onPress={() => handleModal("testimoniouno")}
+            style={{ width: '45%', }}
+          >
+            <Image
+              source={require('../img/testimoniouno.png')}
+              style={{ width: '100%', height: 250 }}
+            />
+          </TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => handleModal("testimoniodos")}
+            style={{ width: '45%', }}
+          >
+            <Image
+              source={require('../img/testimoniodos.png')}
+              style={{ width: '100%', height: 250 }}
+            />
+          </TouchableOpacity>
+        </View>
+        <View style={{ width: '90%', flexDirection: 'row', justifyContent: 'space-between', marginHorizontal: '5%', marginVertical: 20 }}>
+          <TouchableOpacity
+            onPress={() => handleModal("testimoniocuatro")}
+            style={{ width: '45%', }}
+          >
+            <Image
+              source={require('../img/testimoniocuatro.png')}
+              style={{ width: '100%', height: 250 }}
+            />
+          </TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => handleModal("testimoniotres")}
+            style={{ width: '45%', }}
+          >
+            <Image
+              source={require('../img/testimoniotres.png')}
+              style={{ width: '100%', height: 250 }}
+            />
+          </TouchableOpacity>
+        </View>
+        <View style={{ width: '90%', flexDirection: 'row', justifyContent: 'space-between', marginHorizontal: '5%', marginVertical: 20 }}>
+          <TouchableOpacity
+            onPress={() => handleModal("testimonioscinco")}
+            style={{ width: '45%', }}
+          >
+            <Image
+              source={require('../img/testimonioscinco.png')}
+              style={{ width: '100%', height: 250 }}
+            />
+          </TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => handleModal("testimoniosseis")}
+            style={{ width: '45%', }}
+          >
+            <Image
+              source={require('../img/testimoniosseis.png')}
+              style={{ width: '100%', height: 250 }}
+            />
+          </TouchableOpacity>
+        </View>
+        <View style={{ width: '90%', flexDirection: 'row', justifyContent: 'space-between', marginHorizontal: '5%', marginVertical: 20 }}>
+          <TouchableOpacity
+            onPress={() => handleModal("testimoniossiete")}
+            style={{ width: '45%', }}
+          >
+            <Image
+              source={require('../img/testimoniossiete.png')}
+              style={{ width: '100%', height:250 }}
+            />
+          </TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => handleModal("testimoniosocho")}
+            style={{ width: '45%', }}
+          >
+            <Image
+              source={require('../img/testimoniosocho.png')}
+              style={{ width: '100%', height:250 }}
+            />
+          </TouchableOpacity>
+        </View>
       </ScrollView>
     </SafeAreaView>
   );
@@ -115,5 +364,9 @@ const styles = StyleSheet.create({
   whatsapp: {
     width: 50,
     height: 50,
+  },
+  backgroundVideo: {
+    width: '90%',
+    height: '90%',
   }
 });

@@ -15,7 +15,7 @@ export default function App({ navigation }) {
 
     setTimeout(() => {
       setTiempo(false)
-    }, 34500)
+    }, 500)
 
   function handleInicio(){
 
