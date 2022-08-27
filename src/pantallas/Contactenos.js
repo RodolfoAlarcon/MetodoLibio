@@ -253,7 +253,7 @@ export function Contactenos() {
               <Picker.Item label="Slecione un País" value="" />
               {
                 Paises.map(item =>
-                  <Picker.Item label={item.nombre} value={item.id} />
+                  <Picker.Item label={item.nombre} value={item.nombre} />
                 )
               }
             </Picker>
@@ -266,7 +266,7 @@ export function Contactenos() {
                   <Text style={{ color: '#fff' }}>
                     {
                       Paises.map(e => {
-                        if (pais === e.id) {
+                        if (pais === e.nombre) {
                           codi = e.numero
                           return (
                             e.numero
@@ -293,7 +293,7 @@ export function Contactenos() {
             </View>
           </View>
         </View>
-        <View style={{ width: '100%', alignItems: 'center' }}>
+        <View style={{ width: '100%', alignItems: 'center', marginBottom:50}}>
           <TouchableOpacity
             onPress={() => handleEmail(nombre,correo,pais,telefono,codi)}
             style={styles.boton}
@@ -314,7 +314,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#141f23',
   },
   titulo: {
-    fontSize: 28,
+    fontSize: 26,
     color: '#ffb800',
     textAlign: 'center',
     fontWeight: '600',

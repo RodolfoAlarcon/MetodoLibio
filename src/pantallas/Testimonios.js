@@ -130,57 +130,6 @@ export function Testimonios() {
       )
     }
 
-    if (img === "testimonioscinco") {
-      return (
-        <View style={{ flex: 1, width: '100%', height: '100%', justifyContent: 'center', alignItems: 'center' }}>
-          <TouchableOpacity
-            style={{ position: 'absolute', top: '1%', right: '2%' }}
-            onPress={() => setModalVisible(!modalVisible)}
-          >
-            <Icon size={25} color='#fff' name='close' />
-          </TouchableOpacity>
-          <Video
-            ref={video}
-            style={styles.backgroundVideo}
-            source={{
-              uri: 'https://metodolibio.com/wp-content/uploads/2022/08/textimonio-mexico.mp4',
-            }}
-            useNativeControls
-            resizeMode='stretch'
-            isLooping
-            onPlaybackStatusUpdate={status => setStatus(() => status)}
-            useNativeControls={false}
-            shouldPlay={true}
-          />
-        </View>
-      )
-    }
-
-    if (img === "testimoniosseis") {
-      return (
-        <View style={{ flex: 1, width: '100%', height: '100%', justifyContent: 'center', alignItems: 'center' }}>
-          <TouchableOpacity
-            style={{ position: 'absolute', top: '1%', right: '2%' }}
-            onPress={() => setModalVisible(!modalVisible)}
-          >
-            <Icon size={25} color='#fff' name='close' />
-          </TouchableOpacity>
-          <Video
-            ref={video}
-            style={styles.backgroundVideo}
-            source={{
-              uri: 'https://metodolibio.com/wp-content/uploads/2022/08/textimonio-espana-02.mp4',
-            }}
-            useNativeControls
-            resizeMode='stretch'
-            isLooping
-            onPlaybackStatusUpdate={status => setStatus(() => status)}
-            useNativeControls={false}
-            shouldPlay={true}
-          />
-        </View>
-      )
-    }
 
     if (img === "testimoniossiete") {
       return (
@@ -195,7 +144,7 @@ export function Testimonios() {
             ref={video}
             style={styles.backgroundVideo}
             source={{
-              uri: 'https://metodolibio.com/wp-content/uploads/2022/08/video-1629304122.mp4',
+              uri: 'https://metodolibio.com/wp-content/uploads/2022/08/textimonio-peru-01.mp4',
             }}
             useNativeControls
             resizeMode='stretch'
@@ -302,26 +251,6 @@ export function Testimonios() {
         </View>
         <View style={{ width: '90%', flexDirection: 'row', justifyContent: 'space-between', marginHorizontal: '5%', marginVertical: 20 }}>
           <TouchableOpacity
-            onPress={() => handleModal("testimonioscinco")}
-            style={{ width: '45%', }}
-          >
-            <Image
-              source={require('../img/testimonioscinco.png')}
-              style={{ width: '100%', height: 250 }}
-            />
-          </TouchableOpacity>
-          <TouchableOpacity
-            onPress={() => handleModal("testimoniosseis")}
-            style={{ width: '45%', }}
-          >
-            <Image
-              source={require('../img/testimoniosseis.png')}
-              style={{ width: '100%', height: 250 }}
-            />
-          </TouchableOpacity>
-        </View>
-        <View style={{ width: '90%', flexDirection: 'row', justifyContent: 'space-between', marginHorizontal: '5%', marginVertical: 20 }}>
-          <TouchableOpacity
             onPress={() => handleModal("testimoniossiete")}
             style={{ width: '45%', }}
           >
@@ -367,6 +296,6 @@ const styles = StyleSheet.create({
   },
   backgroundVideo: {
     width: '90%',
-    height: '90%',
+    height: '70%',
   }
 });

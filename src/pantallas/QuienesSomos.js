@@ -93,14 +93,14 @@ const styles = StyleSheet.create({
   QueEs: {
     color: '#ffb800',
     textAlign: 'center',
-    fontSize: 28,
+    fontSize: 26,
     fontWeight: 'bold',
     marginVertical: 15,
     marginTop:25
   },
   QueEsTexto: {
     color: '#fff',
-    fontSize: 19,
+    fontSize: 17,
     paddingHorizontal: '5%',
     textAlign: 'justify'
   },
@@ -127,12 +127,12 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: '#ffb800',
     fontWeight: 'bold',
-    fontSize: 25
+    fontSize: 23
   },
   Texto: {
     textAlign: 'justify',
     color: '#fff',
-    fontSize: 21,
+    fontSize: 19,
     marginTop: 5
   },
   copy: {
