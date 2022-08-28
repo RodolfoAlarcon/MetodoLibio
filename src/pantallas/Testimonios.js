@@ -209,6 +209,12 @@ export function Testimonios() {
         }
       </Modal>
       <ScrollView>
+      <Text style={styles.QueEs}>
+        ¡TESTIMONIOS DE NUESTROS PARTICIPANTES!
+      </Text>
+      <Text style={styles.QueEsTexto}>
+      Ya ellos lo lograron, tú también puedes tener estos resultados...
+      </Text>
         <View style={{ width: '90%', flexDirection: 'row', justifyContent: 'space-between', marginHorizontal: '5%', marginVertical: 20 }}>
           <TouchableOpacity
             onPress={() => handleModal("testimoniouno")}
@@ -256,7 +262,7 @@ export function Testimonios() {
           >
             <Image
               source={require('../img/testimoniossiete.png')}
-              style={{ width: '100%', height:250 }}
+              style={{ width: '100%', height: 250 }}
             />
           </TouchableOpacity>
           <TouchableOpacity
@@ -265,10 +271,18 @@ export function Testimonios() {
           >
             <Image
               source={require('../img/testimoniosocho.png')}
-              style={{ width: '100%', height:250 }}
+              style={{ width: '100%', height: 250 }}
             />
           </TouchableOpacity>
         </View>
+        <View style={styles.copy}>
+        <Text style={{ color: '#fff', fontSize: 15, marginRight: 4 }}>
+          Copyright® 2022,
+        </Text>
+        <Text style={{ color: '#ffb800', fontSize: 15 }}>
+          Created by AlucinaMKT
+        </Text>
+      </View>
       </ScrollView>
     </SafeAreaView>
   );
@@ -287,7 +301,7 @@ const styles = StyleSheet.create({
     resizeMode: 'contain',
     position: 'absolute',
     zIndex: 9,
-    bottom: 10,
+    bottom: 25,
     right: 10
   },
   whatsapp: {
@@ -297,5 +311,25 @@ const styles = StyleSheet.create({
   backgroundVideo: {
     width: '90%',
     height: '70%',
+  },
+  QueEs: {
+    color: '#ffb800',
+    textAlign: 'center',
+    fontSize: 20,
+    fontWeight: 'bold',
+    marginTop: 15
+  },
+  QueEsTexto: {
+    color: '#fff',
+    fontSize: 15,
+    paddingHorizontal: '5%',
+    textAlign: 'center'
+  },
+  copy: {
+    width: '100%',
+    flexDirection: 'row',
+    justifyContent: 'center',
+    marginVertical: 5,
+    marginTop:50
   }
 });

@@ -61,10 +61,10 @@ export function Inicio({ navigation }) {
 
       <View style={styles.copy}>
         <Text style={{ color: '#fff', fontSize: 15, marginRight: 4 }}>
-          © Copyright,
+          Copyright® 2022,
         </Text>
         <Text style={{ color: '#ffb800', fontSize: 15 }}>
-          Alucinamkt
+          Created by AlucinaMKT
         </Text>
       </View>
     </SafeAreaView>
@@ -91,28 +91,27 @@ const styles = StyleSheet.create({
     fontWeight: '600'
   },
   boton: {
-    width: 300,
+    width: 220,
     backgroundColor: '#ffb800',
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 30,
     borderWidth: 1.7,
     borderColor: '#ffb20085',
-    borderBottomWidth: 3,
-    paddingVertical: 15,
-    marginVertical: 8
+    borderBottomWidth: 2,
+    paddingVertical: 13,
+    marginVertical: 10
   },
   textoBoton: {
     color: '#141f23',
     fontWeight: '900',
-    fontSize: 21
+    fontSize: 18
   },
   copy: {
     width: '100%',
     flexDirection: 'row',
-    position: 'absolute',
-    bottom: 0,
     justifyContent: 'center',
-    marginVertical: 5
+    marginVertical: 5,
+    marginTop:30
   }
 });

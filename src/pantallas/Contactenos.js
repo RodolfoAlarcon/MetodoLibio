@@ -189,7 +189,7 @@ export function Contactenos() {
       )
     }
 
-    const prueba = "https://api.whatsapp.com/send?phone=+5804127273005&text=Hola%20Metodo%20Libio%20soy%20" + nombreEnviar + ",%0D%0Aeste%20es%20mi%20numero%20personal%20" + codigoEnviar + telefonoEnviar + ",%0D%0Asoy%20de%20" + paisEnviar + "%20y%20estoy%20interesado%20en%20el%20MetodoLibio!!!"
+    const prueba = "https://api.whatsapp.com/send?phone=+593993371891&text=Hola%20Metodo%20Libio%20soy%20" + nombreEnviar + ",%0D%0Aeste%20es%20mi%20numero%20personal%20" + codigoEnviar + telefonoEnviar + ",%0D%0Asoy%20de%20" + paisEnviar + "%20y%20estoy%20interesado%20en%20el%20MetodoLibio!!!%0D%0Ay%20quisiera%20más%20información%20acerca%20de%20lo%20que%20realizan"
     Linking.openURL(prueba)
 
   }
@@ -250,7 +250,7 @@ export function Contactenos() {
               onValueChange={(itemValue, itemIndex) =>
                 setPais(itemValue)
               }>
-              <Picker.Item label="Slecione un País" value="" />
+              <Picker.Item label="Selecione un País" value="" />
               {
                 Paises.map(item =>
                   <Picker.Item label={item.nombre} value={item.nombre} />
@@ -303,6 +303,14 @@ export function Contactenos() {
             </Text>
           </TouchableOpacity>
         </View>
+        <View style={styles.copy}>
+        <Text style={{ color: '#fff', fontSize: 15, marginRight: 4 }}>
+          Copyright® 2022,
+        </Text>
+        <Text style={{ color: '#ffb800', fontSize: 15 }}>
+          Created by AlucinaMKT
+        </Text>
+      </View>
       </ScrollView>
     </SafeAreaView>
   );
@@ -354,7 +362,7 @@ const styles = StyleSheet.create({
     resizeMode: 'contain',
     position: 'absolute',
     zIndex: 9,
-    bottom: 10,
+    bottom: 25,
     right: 10
   },
   whatsapp: {
@@ -379,4 +387,10 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     fontWeight: '600'
   },
+  copy: {
+    width: '100%',
+    flexDirection: 'row',
+    justifyContent: 'center',
+    marginVertical: 5
+  }
 });

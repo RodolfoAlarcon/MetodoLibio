@@ -51,6 +51,14 @@ export function Metodologia() {
           </Text>
         </View>
       </ScrollView>
+      <View style={styles.copy}>
+        <Text style={{ color: '#fff', fontSize: 15, marginRight: 4 }}>
+          Copyright® 2022,
+        </Text>
+        <Text style={{ color: '#ffb800', fontSize: 15 }}>
+          Created by AlucinaMKT
+        </Text>
+      </View>
     </SafeAreaView>
   );
 }
@@ -78,11 +86,19 @@ const styles = StyleSheet.create({
     resizeMode: 'contain',
     position: 'absolute',
     zIndex: 9,
-    bottom: 10,
+    bottom: 25,
     right: 10
   },
   whatsapp: {
     width: 50,
     height: 50,
+  },
+  copy: {
+    width: '100%',
+    flexDirection: 'row',
+    position: 'absolute',
+    bottom: 0,
+    justifyContent: 'center',
+    marginVertical: 5
   }
 });
