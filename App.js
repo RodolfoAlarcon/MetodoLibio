@@ -8,49 +8,9 @@ import { useNavigation } from '@react-navigation/native';
 
 export default function App() {
 
-  const video = useRef(null);
-  const [status, setStatus] = useState({});
-  const [tiempo, setTiempo] = useState(true)
-
-
-  function handleInicio() {
-
-
-    if (tiempo === true) {
-      console.log(status)
-      if (status.positionMillis === 34933) {
-        setTiempo(false)
-      }
-
-      return (
-        <Video
-          ref={video}
-          style={styles.backgroundVideo}
-          source={{
-            uri: 'https://metodolibio.com/wp-content/uploads/2022/08/videoinicial.mp4',
-          }}
-          useNativeControls
-          resizeMode='stretch'
-          onPlaybackStatusUpdate={status => setStatus(() => status)}
-          useNativeControls={false}
-          shouldPlay={true}
-        />
-      )
-    } else {
-      return (
-        <MainStack />
-      )
-    }
-
-  }
-
 
   return (
-    <>
-      {
-        handleInicio()
-      }
-    </>
+    <MainStack />
   )
 
 }

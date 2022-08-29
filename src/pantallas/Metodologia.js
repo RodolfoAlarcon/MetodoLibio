@@ -96,8 +96,6 @@ const styles = StyleSheet.create({
   copy: {
     width: '100%',
     flexDirection: 'row',
-    position: 'absolute',
-    bottom: 0,
     justifyContent: 'center',
     marginVertical: 5
   }

@@ -112,6 +112,8 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     marginVertical: 5,
-    marginTop:30
+    marginTop:30,
+    position:'absolute',
+    bottom:0
   }
 });

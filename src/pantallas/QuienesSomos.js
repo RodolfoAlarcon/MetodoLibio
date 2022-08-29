@@ -27,7 +27,7 @@ export function QuienesSomos() {
           ref={video}
           style={styles.backgroundVideo}
           source={{
-            uri: 'https://metodolibio.com/wp-content/uploads/2021/08/video-1628539909.mp4',
+            uri: 'https://metodolibio.com/wp-content/uploads/2022/08/WhatsApp-Video-2022-08-28-at-2.23.19-PM.mp4',
           }}
           useNativeControls
           resizeMode='cover'
