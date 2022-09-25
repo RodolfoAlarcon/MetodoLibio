@@ -84,7 +84,7 @@ export function QuienesSomos() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#141f23',
+    backgroundColor: '#3B3B3B',
   },
   backgroundVideo: {
     width: '100%',

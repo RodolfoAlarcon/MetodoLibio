@@ -7,6 +7,7 @@ import { Metodologia } from "../pantallas/Metodologia";
 import { Testimonios } from '../pantallas/Testimonios';
 import { Contactenos } from '../pantallas/Contactenos';
 import { Terminos } from '../pantallas/Terminos';
+import { Formulario } from '../pantallas/Formulario';
 
 const Stack = createNativeStackNavigator();
 
@@ -41,6 +42,10 @@ export default function MainStack() {
                 <Stack.Screen
                     name="Terminos"
                     component={Terminos}
+                />
+                <Stack.Screen
+                    name="Formulario"
+                    component={Formulario}
                 />
             </Stack.Navigator>
         </NavigationContainer>

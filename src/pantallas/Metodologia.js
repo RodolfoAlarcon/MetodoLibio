@@ -50,8 +50,7 @@ export function Metodologia() {
             <Icon name='check' size={20} color='#ffb800' /> Ejercicios en casa para no olvidar lo que has aprendido💡
           </Text>
         </View>
-      </ScrollView>
-      <View style={styles.copy}>
+        <View style={styles.copy}>
         <Text style={{ color: '#fff', fontSize: 15, marginRight: 4 }}>
           Copyright® 2022,
         </Text>
@@ -59,13 +58,14 @@ export function Metodologia() {
           Created by AlucinaMKT
         </Text>
       </View>
+      </ScrollView>
     </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#141f23',
+    backgroundColor: '#3B3B3B',
     width: '100%',
     paddingHorizontal: '5%',
   },

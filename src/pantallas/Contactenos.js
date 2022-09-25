@@ -189,7 +189,7 @@ export function Contactenos() {
       )
     }
 
-    const prueba = "https://api.whatsapp.com/send?phone=+593993371891&text=Hola%20Metodo%20Libio%20soy%20" + nombreEnviar + ",%0D%0Aeste%20es%20mi%20numero%20personal%20" + codigoEnviar + telefonoEnviar + ",%0D%0Asoy%20de%20" + paisEnviar + "%20y%20estoy%20interesado%20en%20el%20MetodoLibio!!!%0D%0Ay%20quisiera%20más%20información%20acerca%20de%20lo%20que%20realizan"
+    const prueba = "https://api.whatsapp.com/send?phone=+593993371891&text=Hola%20Método%20Libio%20soy%20" + nombreEnviar + ",%20este%20es%20mi%20número%20personal%20" + codigoEnviar + telefonoEnviar + ",%20Asoy%20de%20" + paisEnviar + "%20y%20estoy%20interesado%20en%20el%20MetodoLibio!!!%20Ay%20quisiera%20más%20información%20acerca%20de%20lo%20que%20realizan"
     Linking.openURL(prueba)
 
   }
@@ -319,7 +319,7 @@ export function Contactenos() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#141f23',
+    backgroundColor: '#3B3B3B',
   },
   titulo: {
     fontSize: 26,

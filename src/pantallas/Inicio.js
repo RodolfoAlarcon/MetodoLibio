@@ -13,7 +13,7 @@ export function Inicio({ navigation }) {
       />
 
       <Text style={styles.slogan}>
-        Controla tu tartamudez
+        Elimina tu tartamudez
       </Text>
 
       <TouchableOpacity
@@ -50,7 +50,7 @@ export function Inicio({ navigation }) {
       </TouchableOpacity>
       <TouchableOpacity
         onPress={() => {
-          navigation.navigate('Contactenos')
+          navigation.navigate('Formulario')
         }}
         style={styles.boton}
       >
@@ -74,7 +74,7 @@ export function Inicio({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#141f23',
+    backgroundColor: '#3B3B3B',
     justifyContent: 'center',
     alignItems: 'center'
   },
@@ -92,7 +92,7 @@ const styles = StyleSheet.create({
   },
   boton: {
     width: 220,
-    backgroundColor: '#ffb800',
+    backgroundColor: '#F4B02B',
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 30,
@@ -112,8 +112,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     marginVertical: 5,
-    marginTop:30,
-    position:'absolute',
-    bottom:0
+    position: 'absolute',
+    bottom: 0
   }
 });
